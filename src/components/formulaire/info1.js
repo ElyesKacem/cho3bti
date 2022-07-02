@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { Button, Container, Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 
-const Science = () => {
+const Info1 = () => {
 
   const [msg, setMsg] = useState('')
   const [mg, setMg] = useState(0);
   const [m, setM] = useState(0);
+  const [algo, setAlgo] = useState(0);
   const [sp, setSp] = useState(0);
-  const [svt, setSvt] = useState(0);
+  const [tic, setTic] = useState(0);
+  const [bd, setBd] = useState(0);
   const [f, setF] = useState(0);
   const [ang, setAng] = useState(0);
 
@@ -17,14 +19,14 @@ const Science = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    var fg=4*mg+2*m+1.5*sp+1.5*svt+f*1+ang*1;
+    var fg=4*mg+1.5*algo+1.5*m+0.5*sp+0.25*tic+0.25*bd+f*1+ang*1;
     setMsg('Votre score est : '+fg)
     
   }
 
 
   return (<div>
-    <h2>Bac science</h2> <br />
+    <h2>Bac Informatique 1</h2> <br />
 
 
     <Grid justifyContent="center" alignItems="center" container spacing={2}>
@@ -53,6 +55,15 @@ const Science = () => {
         />
 
       </Grid>
+        <Grid item >
+          <TextField
+            type="number"
+            required
+            id="algo"
+            label="Algorithme"
+            defaultValue="0"
+            onChange={(e)=>setAlgo(e.target.value)}
+          />
 
       <Grid item >
         <TextField
@@ -65,15 +76,30 @@ const Science = () => {
         />
 
       </Grid>
+
       <Grid item >
         <TextField
           type="number"
           required
-          id="svt"
-          label="SVT"
+          id="tic"
+          label="Tic"
           defaultValue="0"
-          onChange={(e)=>setSvt(e.target.value)}
+          onChange={(e)=>setTic(e.target.value)}
         />
+
+      </Grid>
+
+      <Grid item >
+        <TextField
+          type="number"
+          required
+          id="Bd"
+          label="Bd"
+          defaultValue="0"
+          onChange={(e)=>setBd(e.target.value)}
+        />
+
+      </Grid>
 
       </Grid>
 
@@ -113,4 +139,4 @@ const Science = () => {
   </div>);
 }
 
-export default Science;
+export default Info1;

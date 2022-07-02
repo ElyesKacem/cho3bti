@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { Button, Container, Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 
-const Science = () => {
+const Lettre = () => {
 
   const [msg, setMsg] = useState('')
   const [mg, setMg] = useState(0);
-  const [m, setM] = useState(0);
-  const [sp, setSp] = useState(0);
-  const [svt, setSvt] = useState(0);
+  const [a, setA] = useState(0);
+  const [ph, setPh] = useState(0);
+  const [hg, setHg] = useState(0);
   const [f, setF] = useState(0);
   const [ang, setAng] = useState(0);
 
@@ -17,14 +17,14 @@ const Science = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    var fg=4*mg+2*m+1.5*sp+1.5*svt+f*1+ang*1;
+    var fg=4*mg+1.5*a+1.5*ph+1*hg+f*1+ang*1;
     setMsg('Votre score est : '+fg)
     
   }
 
 
   return (<div>
-    <h2>Bac science</h2> <br />
+    <h2>Bac Lettre</h2> <br />
 
 
     <Grid justifyContent="center" alignItems="center" container spacing={2}>
@@ -46,34 +46,38 @@ const Science = () => {
         <TextField
           type="number"
           required
-          id="m"
-          label="Mathématique"
+          id="a"
+          label="Arabe"
           defaultValue="0"
-          onChange={(e)=>setM(e.target.value)}
+          onChange={(e)=>setA(e.target.value)}
         />
 
       </Grid>
+        <Grid item >
+          <TextField
+            type="number"
+            required
+            id="ph"
+            label="Phylosophie"
+            defaultValue="0"
+            onChange={(e)=>setPh(e.target.value)}
+          />
 
       <Grid item >
         <TextField
           type="number"
           required
-          id="sp"
-          label="Science physique"
+          id="Hg"
+          label="Histoire Géographie"
           defaultValue="0"
-          onChange={(e)=>setSp(e.target.value)}
+          onChange={(e)=>setHg(e.target.value)}
         />
 
       </Grid>
-      <Grid item >
-        <TextField
-          type="number"
-          required
-          id="svt"
-          label="SVT"
-          defaultValue="0"
-          onChange={(e)=>setSvt(e.target.value)}
-        />
+
+     
+
+      
 
       </Grid>
 
@@ -113,4 +117,4 @@ const Science = () => {
   </div>);
 }
 
-export default Science;
+export default Lettre;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { Button, Container, Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 
-const Science = () => {
+const Math = () => {
 
   const [msg, setMsg] = useState('')
   const [mg, setMg] = useState(0);
@@ -17,14 +17,14 @@ const Science = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    var fg=4*mg+2*m+1.5*sp+1.5*svt+f*1+ang*1;
+    var fg=4*mg+2*m+1.5*sp+0.5*svt+f*1+ang*1;
     setMsg('Votre score est : '+fg)
     
   }
 
 
   return (<div>
-    <h2>Bac science</h2> <br />
+    <h2>Bac Mathématique</h2> <br />
 
 
     <Grid justifyContent="center" alignItems="center" container spacing={2}>
@@ -113,4 +113,4 @@ const Science = () => {
   </div>);
 }
 
-export default Science;
+export default Math;
