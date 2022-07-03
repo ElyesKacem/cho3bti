@@ -94,7 +94,7 @@ export default function StepperScore() {
               : sectionBac === 4 ? <Info1 sx={{ mt: 2, mb: 1 }}></Info1>
               : sectionBac === 5 ? <Info2 sx={{ mt: 2, mb: 1 }}></Info2>
               : sectionBac === 6 ? <Lettre sx={{ mt: 2, mb: 1 }}></Lettre>
-              : sectionBac === 6 ? <Eco sx={{ mt: 2, mb: 1 }}></Eco>
+              : sectionBac === 7 ? <Eco sx={{ mt: 2, mb: 1 }}></Eco>
               : <div>Veuillez choisir une section</div>
             }
 

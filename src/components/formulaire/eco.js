@@ -18,7 +18,7 @@ const Eco = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    var fg=4*mg+1.5*Ec+1.5*Ge+m+0.5*hg+f*1+ang*1;
+    var fg=4*mg+1.5*Ec+1.5*Ge+m*0.5+0.5*hg+f*1+ang*1;
     setMsg('Votre score est : '+fg)
     
   }
@@ -63,7 +63,7 @@ const Eco = () => {
             defaultValue="0"
             onChange={(e)=>setGe(e.target.value)}
           />
-
+  </Grid>
       <Grid item >
         <TextField
           type="number"
@@ -92,7 +92,7 @@ const Eco = () => {
 
       
 
-      </Grid>
+    
 
       <Grid item >
         <TextField

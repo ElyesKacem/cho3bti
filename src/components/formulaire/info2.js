@@ -18,7 +18,7 @@ const Info2 = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    var fg=4*mg+1.5*algo+1.5*m+0.5*sp+0.25*sti+f*1+ang*1;
+    var fg=4*mg+1.5*algo+1.5*m+0.5*sp+0.5*sti+f*1+ang*1;
     setMsg('Votre score est : '+fg)
     
   }
@@ -62,7 +62,8 @@ const Info2 = () => {
             label="Algorithme"
             defaultValue="0"
             onChange={(e)=>setAlgo(e.target.value)}
-          />
+          /> 
+        </Grid>
 
       <Grid item >
         <TextField
@@ -90,7 +91,7 @@ const Info2 = () => {
 
       
 
-      </Grid>
+     
 
       <Grid item >
         <TextField

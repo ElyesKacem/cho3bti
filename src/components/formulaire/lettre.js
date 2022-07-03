@@ -62,6 +62,7 @@ const Lettre = () => {
             defaultValue="0"
             onChange={(e)=>setPh(e.target.value)}
           />
+         </Grid>
 
       <Grid item >
         <TextField
@@ -79,7 +80,7 @@ const Lettre = () => {
 
       
 
-      </Grid>
+     
 
       <Grid item >
         <TextField

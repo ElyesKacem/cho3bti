@@ -63,7 +63,7 @@ const Info1 = () => {
             label="Algorithme"
             defaultValue="0"
             onChange={(e)=>setAlgo(e.target.value)}
-          />
+          /> </Grid>
 
       <Grid item >
         <TextField
@@ -101,7 +101,7 @@ const Info1 = () => {
 
       </Grid>
 
-      </Grid>
+      
 
       <Grid item >
         <TextField

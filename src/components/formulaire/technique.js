@@ -15,11 +15,11 @@ const Technique = () => {
 
 
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    var fg=4*mg+1.5*te+1.5*m+1*sp+f*1+ang*1;
-    setMsg('Votre score est : '+fg)
-    
+    var fg = 4 * mg + 1.5 * te + 1.5 * m + 1 * sp + f * 1 + ang * 1;
+    setMsg('Votre score est : ' + fg)
+
   }
 
 
@@ -37,45 +37,47 @@ const Technique = () => {
           id="mg"
           label="Moyenne globale"
           defaultValue="0"
-          onChange={(e)=>setMg(e.target.value)}
+          onChange={(e) => setMg(e.target.value)}
         />
 
       </Grid>
+      <Grid item >
+        <TextField
+          type="number"
+          required
+          id="tech"
+          label="Technique"
+          defaultValue="0"
+          onChange={(e) => setTe(e.target.value)}
+        />
+
+</Grid>
+
         <Grid item >
           <TextField
             type="number"
             required
-            id="svt"
-            label="Technique"
+            id="m"
+            label="Mathématique"
             defaultValue="0"
-            onChange={(e)=>setTe(e.target.value)}
+            onChange={(e) => setM(e.target.value)}
           />
 
-      <Grid item >
-        <TextField
-          type="number"
-          required
-          id="m"
-          label="Mathématique"
-          defaultValue="0"
-          onChange={(e)=>setM(e.target.value)}
-        />
+        </Grid>
 
-      </Grid>
+        <Grid item >
+          <TextField
+            type="number"
+            required
+            id="sp"
+            label="Science physique"
+            defaultValue="0"
+            onChange={(e) => setSp(e.target.value)}
+          />
 
-      <Grid item >
-        <TextField
-          type="number"
-          required
-          id="sp"
-          label="Science physique"
-          defaultValue="0"
-          onChange={(e)=>setSp(e.target.value)}
-        />
+        </Grid>
 
-      </Grid>
-
-      </Grid>
+      
 
       <Grid item >
         <TextField
@@ -84,7 +86,7 @@ const Technique = () => {
           id="f"
           label="Français"
           defaultValue="0"
-          onChange={(e)=>setF(e.target.value)}
+          onChange={(e) => setF(e.target.value)}
         />
 
       </Grid>
@@ -96,7 +98,7 @@ const Technique = () => {
           id="ang"
           label="Anglais"
           defaultValue="0"
-          onChange={(e)=>setAng(e.target.value)}
+          onChange={(e) => setAng(e.target.value)}
         />
 
       </Grid>

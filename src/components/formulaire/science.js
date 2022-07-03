@@ -17,7 +17,7 @@ const Science = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    var fg=4*mg+2*m+1.5*sp+1.5*svt+f*1+ang*1;
+    var fg=4*mg+1*m+1.5*sp+1.5*svt+f*1+ang*1;
     setMsg('Votre score est : '+fg)
     
   }
