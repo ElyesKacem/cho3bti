@@ -18,7 +18,7 @@ const Eco = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    var fg=4*mg+1.5*a+1.5*ph+1*hg+f*1+ang*1;
+    var fg=4*mg+1.5*Ec+1.5*Ge+m+0.5*hg+f*1+ang*1;
     setMsg('Votre score est : '+fg)
     
   }
